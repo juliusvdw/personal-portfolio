@@ -2,6 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 
 import Navbar from './Navbar'
+import HeroSection from './HeroSection'
 
 const ContentBody = ({ children }) => {
 
@@ -9,7 +10,7 @@ const ContentBody = ({ children }) => {
         <div className = 'content-body-wrapper' style = {wrapperStyle}>
 
             <Navbar />
-
+            <HeroSection />
         </div>
     )
     

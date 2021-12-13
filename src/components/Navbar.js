@@ -27,7 +27,8 @@ const linksContainerStyle = {
    width:'250px',
    justifyContent:'flex-end',
    position:'absolute',
-   right:'80px'
+   right:'80px',
+   zIndex:'998'
 }
 
 const linkStyle = {
