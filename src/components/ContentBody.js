@@ -20,7 +20,9 @@ const wrapperStyle = {
     height:'100vh',
     width:'calc(100vw - 100px)',
     backgroundColor:'#000',
-    marginLeft:'100px'
+    marginLeft:'100px',
+    paddingLeft:'120px',
+    paddingRight:'120px'
 }
 
 ContentBody.propTypes = {
