@@ -26,15 +26,15 @@ const SideMenu = ({ children }) => {
 
             <div className = 'side-menu-large-section' style = {largeSectionStyle}>
 
-                <div className = 'side-menu-section' style = {sideMenuSectionStyle}>
-                        Home
+                <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleMenuClick()}>
+                        About
                     </div>
         
-                    <div className = 'side-menu-section' style = {sideMenuSectionStyle}>
+                    <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleMenuClick()}>
                         Projects
                     </div>
         
-                    <div className = 'side-menu-section' style = {sideMenuSectionStyle}>
+                    <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleMenuClick()}>
                         Contact
                     </div>
 
