@@ -12,6 +12,7 @@ const IndexPage = () => (
   <>
   <Helmet>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </Helmet>
     <Seo title="Home" />
     <SideMenu />

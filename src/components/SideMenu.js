@@ -1,20 +1,46 @@
-import * as React from "react"
+import React, {useState}from "react"
 import PropTypes from "prop-types"
 
 
 const SideMenu = ({ children }) => {
 
+    const [menuOpen, setMenuopen] = useState(false)
+
     const handleMenuClick = () => {
 
         const menu = document.querySelector('.side-menu-wrapper');
 
-        menu.style.transform = 'translateX(0)'
+        if(!menuOpen) {
+            menu.style.transform = 'translateX(0)'
+            setMenuopen(true)
+        } else {
+            menu.style.transform = 'translateX(calc(-100vw + 100px))'
+            setMenuopen(false)
+        }
 
     }
 
     return (
         <>
         <div className = 'side-menu-wrapper' style = {wrapperStyle}>
+
+            <div className = 'side-menu-large-section' style = {largeSectionStyle}>
+
+                <div className = 'side-menu-section' style = {sideMenuSectionStyle}>
+                        Home
+                    </div>
+        
+                    <div className = 'side-menu-section' style = {sideMenuSectionStyle}>
+                        Projects
+                    </div>
+        
+                    <div className = 'side-menu-section' style = {sideMenuSectionStyle}>
+                        Contact
+                    </div>
+
+            </div>
+
+            
 
         <div className = 'side-menu-right-wrapper' style = {rightWrapperStyle}>
             <a href = '/' style = {logoStyle}>J</a>
@@ -78,6 +104,25 @@ const socialsStyle = {
     fontSize:'22px',
     display:'flex',
     flexDirection:'column'
+}
+
+const largeSectionStyle = {
+    width: 'calc(100% - 100px)',
+    display:'flex'
+
+}
+const sideMenuSectionStyle = {
+    flex:'1',
+    borderRight:'1px solid rgba(255, 255, 255, 0.2)',
+    height:'100%',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    fontSize:'68px',
+    fontWeight:'300',
+    color:'hsla(0, 0%, 100%, 0.3)',
+    letterSpacing:'2px',
+    transition:'0.3s'
 }
 
 SideMenu.propTypes = {
