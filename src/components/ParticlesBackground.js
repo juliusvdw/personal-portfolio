@@ -20,7 +20,7 @@ const ParticlesBackground = ({ children }) => {
         <>
        
         <Particles
-        style = {{paddingTop:'80px', paddingLeft:'100px'}}
+        style = {{paddingTop:'80px', paddingLeft:'100px', zIndex:'-1'}}
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
