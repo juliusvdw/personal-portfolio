@@ -1,5 +1,14 @@
 a {
   text-decoration: none;
+  color:#fff
+}
+
+a:hover {
+  color:#fff  
+}
+
+body {
+  color:#FFF
 }
 
 /*Side menu */
@@ -13,3 +22,30 @@ a {
   color:#FFFFFF !important;
   cursor: pointer;
 }
+
+/*Navbar */
+
+.navbar-link {
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  position:absolute;
+  left:0;
+  height: 2px;
+  background: #b238eb;
+  transition: 1s;
+  margin-top: 3px;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-link{
+transition: cubic-bezier(.77,0,.18,1) 1s;
+}
+
