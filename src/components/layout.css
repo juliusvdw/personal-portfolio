@@ -23,6 +23,78 @@ body {
   cursor: pointer;
 }
 
+#hamburger-icon{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger-icon span:nth-child(2),#hamburger-icon span:nth-child(3) {
+  top: 10px;
+}
+
+#hamburger-icon span:nth-child(4) {
+  top: 20px;
+}
+
+#hamburger-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#hamburger-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#hamburger-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
 /*Hero section */
 
 .hero-btn {
@@ -31,14 +103,36 @@ body {
   font-size:14px;
   letter-spacing:1px;
   margin-top: 30px;
-  border-color: #FFF;
-  transition:0.5s
+  border-color: #fff;
+  transition:0.5s;
+  color:#fff
 }
 
 .hero-btn:hover {
+ color:#fff;
+  border-color: #802bb1 !important;
+  background-color: #802bb1 !important;
+}
 
-  border-color: #b238eb !important;
-  background-color: #b238eb !important;
+.hero-underline {
+  position: relative;
+}
+
+.hero-underline::after {
+  content: '';
+  display: block;
+  width: 100%;
+  position:absolute;
+  left:0;
+  height: 2px;
+  background: #802bb1;
+  transition: 1s ;
+  margin-top: 8px;
+}
+
+
+.hero-underline{
+transition: 1s ;
 }
 
 
@@ -57,8 +151,8 @@ body {
   position:absolute;
   left:0;
   height: 2px;
-  background: #b238eb;
-  transition: 1s ;
+  background: #802bb1;
+  transition: 0.5s ;
   margin-top: 3px;
 }
 
@@ -67,6 +161,6 @@ body {
 }
 
 .navbar-link{
-transition: 1s ;
+transition: 0.5s ;
 }
 

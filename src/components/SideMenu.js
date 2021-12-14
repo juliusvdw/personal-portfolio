@@ -9,13 +9,22 @@ const SideMenu = ({ children }) => {
     const handleMenuClick = () => {
 
         const menu = document.querySelector('.side-menu-wrapper');
+        const hamburger = document.querySelector('#hamburger-icon')
 
         if(!menuOpen) {
-            menu.style.transform = 'translateX(0)'
+            menu.style.transform = 'translateX(0)';
             setMenuopen(true)
+            setTimeout(() => {
+                hamburger.classList.add('open')
+
+            },500)
         } else {
             menu.style.transform = 'translateX(calc(-100vw + 100px))'
             setMenuopen(false)
+            setTimeout(() => {
+                hamburger.classList.remove('open')
+
+            },500)
         }
 
     }
@@ -45,7 +54,10 @@ const SideMenu = ({ children }) => {
         <div className = 'side-menu-right-wrapper' style = {rightWrapperStyle}>
             <a href = '/' style = {logoStyle}>J</a>
             <div id = 'hamburger-icon' onClick = {()=> handleMenuClick()}>
-            <i class="bi bi-list" style = {iconStyle}></i>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
             <div className = 'menu-socials' style = {socialsStyle}>
@@ -63,14 +75,14 @@ const SideMenu = ({ children }) => {
 
 
 const wrapperStyle = {
-    height:'100vh',
+    minHeight:'100vh',
     width:'100vw',
     display:'flex',
     position:'absolute',
     zIndex:'999',
     backgroundColor:'#000',
     transform: 'translateX(calc(-100vw + 100px))',
-    transition:'0.4s ease'
+    transition:'transform 0.4s ease'
 }
 const rightWrapperStyle = {
     backgroundColor:'#000',
@@ -97,6 +109,7 @@ const iconStyle = {
     fontSize:'34px',
     color:'white',
     transition:'opacity 0.3s '
+    
 }
 
 const socialsStyle = {
