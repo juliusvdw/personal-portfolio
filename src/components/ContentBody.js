@@ -17,7 +17,7 @@ const ContentBody = ({ children }) => {
 }
 
 const wrapperStyle = {
-    height:'100vh',
+    minHeight:'100vh',
     width:'calc(100vw - 100px)',
     backgroundColor:'#000',
     marginLeft:'100px',

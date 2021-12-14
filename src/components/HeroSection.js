@@ -8,19 +8,20 @@ import ParticlesBackground from "./ParticlesBackground";
 const HeroSection = ({ children }) => {
     
     
-   
-
     return (
         <>
         <div className = 'hero-wrapper' style = {heroStyle}>
 
             <div className = 'hero-text-container' style = {heroTextStyle}>
                 <p style = {introSmallStyle}>Hi, I'm Julius.</p>
-                <h1 style = {heroNameStyle}>I build things <span className = 'hero-underline' >for the web.</span> </h1>
+                <h1 style = {heroNameStyle}>I build things <span className = 'hero-underline'  >for the web.</span> </h1>
                 <p style = {subTextStyle}>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
                 <div className = 'btn btn-primary hero-btn'>View My Projects</div>
             </div>
         </div>
+
+        <i className="bi bi-arrow-down" style = {arrowStyle}></i>
+
         </>
     )
     
@@ -28,7 +29,8 @@ const HeroSection = ({ children }) => {
 
 
 const heroStyle = {
-    height:'calc(100vh - 80px)'
+    height:'calc(100vh - 80px)',
+    position:'relative'
 
 }
 
@@ -56,6 +58,14 @@ const subTextStyle = {
     marginTop:'30px',
     fontSize:'15px',
     letterSpacing:'1px'
+}
+
+const arrowStyle = {
+    position :'absolute',
+    right:'40px',
+    bottom:'40px',
+    color:'#802bb1',
+    fontSize:'38px'
 }
 
 HeroSection.propTypes = {
