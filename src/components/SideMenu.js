@@ -6,6 +6,7 @@ const SideMenu = ({ children }) => {
 
     const [menuOpen, setMenuopen] = useState(false)
 
+    //Handle menu hamburger click
     const handleMenuClick = () => {
 
         const menu = document.querySelector('.side-menu-wrapper');
@@ -27,6 +28,29 @@ const SideMenu = ({ children }) => {
             },500)
         }
 
+    }
+
+    //Handle Light switch click 
+    const handleLightSwitch = () => {
+        //target elements to be changed
+        const contentBody = document.querySelector('.content-body-wrapper');
+        const navBar = document.querySelector('#navbar');
+        const sideMenu = document.querySelector('.side-menu-wrapper');
+        const sideMenuRight = document.querySelector('.side-menu-right-wrapper');
+        const menuSocials = document.querySelector('.menu-socials');
+        const sideMenuSection = document.querySelectorAll('.side-menu-section');
+        const navbarLinks = document.querySelectorAll('.navbar-link');
+        const hamburgerLines = document.querySelectorAll('.hamburger-line');
+        const heroBtn = document.querySelector('.hero-btn');
+        contentBody.classList.toggle('light-mode') 
+        navBar.classList.toggle('light-mode') 
+        sideMenu.classList.toggle('light-mode') 
+        sideMenuRight.classList.toggle('menu-section-right-light-mode') 
+        menuSocials.classList.toggle('light-mode') 
+        heroBtn.classList.toggle('btn-light-mode') 
+        sideMenuSection.forEach(item => item.classList.toggle('menu-section-light-mode'))
+        navbarLinks.forEach(item => item.classList.toggle('light-mode'))
+        hamburgerLines.forEach(item => item.classList.toggle('light-mode-background-dark'))
     }
 
     return (
@@ -54,15 +78,17 @@ const SideMenu = ({ children }) => {
         <div className = 'side-menu-right-wrapper' style = {rightWrapperStyle}>
             <a href = '/' style = {logoStyle}>J</a>
             <div id = 'hamburger-icon' onClick = {()=> handleMenuClick()}>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span className = 'hamburger-line'></span>
+                <span className = 'hamburger-line'></span>
+                <span className = 'hamburger-line'></span>
+                <span className = 'hamburger-line'></span>
+                
             </div>
 
             <div className = 'menu-socials' style = {socialsStyle}>
             <i className=" mt-3 bi bi-github"></i>
             <i className=" mt-3 bi bi-linkedin"></i>
+            <div className = 'light-switch mt-3' onClick = {() => handleLightSwitch()}><span className = 'light-slider'></span></div>
             </div>
         </div>
 
@@ -78,7 +104,7 @@ const wrapperStyle = {
     minHeight:'100vh',
     width:'100vw',
     display:'flex',
-    position:'absolute',
+    position:'fixed',
     zIndex:'999',
     backgroundColor:'#000',
     transform: 'translateX(calc(-100vw + 100px))',
@@ -102,7 +128,7 @@ const rightWrapperStyle = {
 
 const logoStyle = {
     fontSize:'28px',
-    color:'white'
+    color:'inherit'
 }
 
 const iconStyle = {
@@ -116,7 +142,8 @@ const socialsStyle = {
     color:'white',
     fontSize:'22px',
     display:'flex',
-    flexDirection:'column'
+    flexDirection:'column',
+    alignItems:'center'
 }
 
 const largeSectionStyle = {
@@ -137,6 +164,8 @@ const sideMenuSectionStyle = {
     letterSpacing:'2px',
     transition:'0.3s'
 }
+
+
 
 SideMenu.propTypes = {
   children: PropTypes.node.isRequired,
