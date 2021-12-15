@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
+import AboutSection from './AboutSection'
 
 const ContentBody = ({ children }) => {
 
@@ -11,6 +12,7 @@ const ContentBody = ({ children }) => {
 
             <Navbar />
             <HeroSection />
+            <AboutSection />
         </div>
     )
     
