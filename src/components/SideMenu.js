@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 const SideMenu = ({ children }) => {
 
     const [menuOpen, setMenuopen] = useState(false)
+    const [lightMode, setLightMode] = useState(false)
 
     //Handle menu hamburger click
     const handleMenuClick = () => {
@@ -32,6 +33,20 @@ const SideMenu = ({ children }) => {
 
     //Handle Light switch click 
     const handleLightSwitch = () => {
+
+        setLightMode(!lightMode)
+
+        //Move light-slider if lightmode == true
+        const lightSlider = document.querySelector('.light-slider')
+        if(!lightMode){
+            lightSlider.style.transform = 'translateX(25px)'
+            lightSlider.style.backgroundColor = '#000'
+        } else {
+            lightSlider.style.transform = 'translateX(0)'
+            lightSlider.style.backgroundColor = 'rgb(200,200,200)'
+        }
+
+
         //target elements to be changed
         const contentBody = document.querySelector('.content-body-wrapper');
         const navBar = document.querySelector('#navbar');

@@ -109,6 +109,9 @@ body {
   padding:2px;
   border: 1px solid rgb(218, 218, 218)
 }
+.light-switch:hover {
+  cursor:pointer
+}
 /*Hero section */
 
 .hero-btn {
@@ -142,17 +145,8 @@ body {
   left:0;
   height: 2px;
   background: #802bb1;
-  transition: 1s ;
   margin-top: 8px;
 }
-
-
-.hero-underline{
-transition: 1s ;
-}
-
-
-
 
 /*Navbar */
 
@@ -176,17 +170,15 @@ transition: 1s ;
   width: 100%;
 }
 
-.navbar-link{
-transition: 0.5s ;
-}
 
 /*Light mode class */
 
 .light-slider {
+  transition: 0.3s;
   width: 20px;
   height:20px;
   border-radius:50%;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(200, 200, 200);
   position: absolute;
 }
 .light-mode  {
