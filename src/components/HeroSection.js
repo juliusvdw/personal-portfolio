@@ -56,7 +56,7 @@ const subTextStyle = {
     color:'#9b9b9b',
     maxWidth:'540px',
     marginTop:'30px',
-    fontSize:'15px',
+    fontSize:'16px',
     letterSpacing:'1px'
 }
 

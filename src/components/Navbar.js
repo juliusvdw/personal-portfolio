@@ -10,6 +10,7 @@ const Navbar = ({ children }) => {
                 <a href = ''><span style = {linkStyle} className = 'navbar-link'>Contact</span> </a>
                 <a href = ''><span style = {linkStyle} className = 'navbar-link'>Projects</span> </a>
                 
+                
             </div>
         </div>
     )
@@ -19,7 +20,6 @@ const Navbar = ({ children }) => {
 const navStyle = {
     height:'80px',
     width:'100%',
-    backgroundColor:'#000',
     paddingTop:'50px'
 }
 
