@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
+import ProjectsSection from "./ProjectsSection"
 
 const ContentBody = ({ children }) => {
 
@@ -13,6 +14,7 @@ const ContentBody = ({ children }) => {
             <Navbar />
             <HeroSection />
             <AboutSection />
+            <ProjectsSection />
         </div>
     )
     
