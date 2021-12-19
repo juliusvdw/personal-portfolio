@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SideMenu from "../components/SideMenu"
 import ContentBody from "../components/ContentBody"
+import MouseCircle from "../components/mouseCircle"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
