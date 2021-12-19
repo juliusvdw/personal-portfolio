@@ -8,7 +8,7 @@ const ProjectsSection = () => {
                 <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
                     <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
                 </div>
-                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
+                <div className = 'col-lg-6 mt-4' style = {projectTextContainerStyle}>
                     <div className = 'project-text-container' style = {projectTextStyle}>
                         <h4 style = {headingStyle}>Cryptohawk</h4>
                         <p className = 'project-description' style = {descriptionStyle}> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem magnam voluptatibus fugit molestias architecto nulla, debitis optio tempore maiores numquam esse. Cupiditate, corporis maiores magnam quia autem animi accusantium.</p>
@@ -29,12 +29,12 @@ const ProjectsSection = () => {
                 </div>
                 {/*Row 2 */}
                
-               <div className = 'row' style = {{marginTop:'50px'}}>
+               <div className = 'row' style = {{marginTop:'100px'}}>
 
                
-                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
+                <div className = 'col-lg-6 mt-4' style = {projectTextContainerStyle}>
                     <div className = 'project-text-container' style = {projectTextStyle}>
-                        <h4 style = {headingStyle}>Cryptohawk</h4>
+                        <h4 style = {headingStyle}>Audiophile</h4>
                         <p className = 'project-description' style = {descriptionStyle}> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem magnam voluptatibus fugit molestias architecto nulla, debitis optio tempore maiores numquam esse. Cupiditate, corporis maiores magnam quia autem animi accusantium.</p>
                         <div className = 'project-tech d-flex' style = {techStyle}>
                             <span>React</span>
@@ -51,18 +51,18 @@ const ProjectsSection = () => {
                     </div>
                 </div>
                 <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
-                    <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
+                    <img src = 'audiophile-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
                 </div>
                 </div>
 
-               <div className = 'row' style = {{marginTop:'50px'}}>
+               <div className = 'row' style = {{marginTop:'100px'}}>
 
                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
-                    <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
+                    <img src = 'devslist-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
                 </div>
-                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
+                <div className = 'col-lg-6 mt-4' style = {projectTextContainerStyle}>
                     <div className = 'project-text-container' style = {projectTextStyle}>
-                        <h4 style = {headingStyle}>Cryptohawk</h4>
+                        <h4 style = {headingStyle}>Devslist</h4>
                         <p className = 'project-description' style = {descriptionStyle}> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem magnam voluptatibus fugit molestias architecto nulla, debitis optio tempore maiores numquam esse. Cupiditate, corporis maiores magnam quia autem animi accusantium.</p>
                         <div className = 'project-tech d-flex' style = {techStyle}>
                             <span>React</span>
@@ -81,31 +81,7 @@ const ProjectsSection = () => {
                 
                 </div>
 
-               <div className = 'row' style = {{marginTop:'50px'}}>
-
                
-                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
-                    <div className = 'project-text-container' style = {projectTextStyle}>
-                        <h4 style = {headingStyle}>Cryptohawk</h4>
-                        <p className = 'project-description' style = {descriptionStyle}> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem magnam voluptatibus fugit molestias architecto nulla, debitis optio tempore maiores numquam esse. Cupiditate, corporis maiores magnam quia autem animi accusantium.</p>
-                        <div className = 'project-tech d-flex' style = {techStyle}>
-                            <span>React</span>
-                            <span>Mongo DB</span>
-                            <span>Express</span>
-                            <span>Coingecko API</span>
-                            <span>Google Cloud</span>
-                        </div>
-                        <div className = 'project-links' style = {linksStyle}>
-                        <i className=" mt-3 bi bi-github" style = {iconStyle}></i>
-                        <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i>
-
-                        </div>
-                    </div>
-                </div>
-                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
-                    <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
-                </div>
-                </div>
                 
         </div>
     )
@@ -128,8 +104,13 @@ const imageStyle = {
     borderRadius:'7px',
 }
 
+const projectTextContainerStyle = {
+    display:'flex',
+    alignItems:'center'
+}
+
 const projectTextStyle = {
-    padding:' 20px 50px'
+    padding: '0px 20px'
 }
 
 const headingStyle = {
