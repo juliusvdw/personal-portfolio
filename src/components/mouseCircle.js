@@ -27,12 +27,32 @@ const MouseCircle = () => {
          mouseCircle.style.left = revisedMousePosX + 'px';
      }
      delayMouseFollow();
+
+     //Transform mouse on link hover and btn hover
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+        link.addEventListener('pointerenter', (e) => {
+            mouseCircle.style.transform = 'scale(0.3)'
+        })
+        link.addEventListener('pointerleave', (e) => {
+            mouseCircle.style.transform = 'scale(1)'
+        })
+    })
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+        button.addEventListener('pointerenter', (e) => {
+            mouseCircle.style.transform = 'scale(0.3)'
+        })
+        button.addEventListener('pointerleave', (e) => {
+            mouseCircle.style.transform = 'scale(1)'
+        })
+    })
+
     },[])
 
-    const mouseCircle = document.querySelector('#mouse-circle');
-    const body = document.querySelector('body');
-    if(body.style.cursor == 'pointer') console.log(true)
+    
 
+    
        
     
     
@@ -51,13 +71,14 @@ const MouseCircle = () => {
 const mouseCircleStyle = {
   
         position: 'absolute',
-        width: '40px',
-        height: '40px',
+        width: '35px',
+        height: '35px',
         margin: '-20px 0 0 -20px',
         border: '1px solid #0f1c64',
         borderRadius: '50%',
         pointerEvents: 'none',
-        backgroundColor:'#fff'
+        backgroundColor:'#802bb1',
+        transition:'transform 0.2s'
     
 }
 
