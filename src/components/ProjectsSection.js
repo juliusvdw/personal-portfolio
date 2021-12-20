@@ -3,7 +3,7 @@ import React from 'react'
 const ProjectsSection = () => {
     return (
         <div className = 'projects-section-wrapper' style = {wrapperStyle}>
-            <h3>Some of my recent projects</h3>
+            <h3 className = 'd-flex'>Some of my recent projects <hr style = {headingLineStyle} /></h3>
             <div className = 'row projects-row' style = {projectsContainerStyle}>
                 <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
                     <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
@@ -20,8 +20,8 @@ const ProjectsSection = () => {
                             <span>Google Cloud</span>
                         </div>
                         <div className = 'project-links' style = {linksStyle}>
-                        <a href = '#'><i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
-                        <a href = '#'><i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
+                        <a ><i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
+                        <a ><i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
 
                         </div>
                     </div>
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
                 </div>
                 {/*Row 2 */}
                
-               <div className = 'row' style = {{marginTop:'70px'}}>
+               <div className = 'row' style = {{marginTop:'90px'}}>
 
                
                 <div className = 'col-lg-6 mt-4' style = {projectTextContainerStyle}>
@@ -44,8 +44,8 @@ const ProjectsSection = () => {
                             <span>Google Cloud</span>
                         </div>
                         <div className = 'project-links' style = {linksStyle}>
-                        <a href = '#'><i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
-                        <a href = '#'><i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
+                        <a ><i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
+                        <a ><i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
 
                         </div>
                     </div>
@@ -55,7 +55,7 @@ const ProjectsSection = () => {
                 </div>
                 </div>
 
-               <div className = 'row' style = {{marginTop:'70px'}}>
+               <div className = 'row' style = {{marginTop:'90px'}}>
 
                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
                     <img src = 'devslist-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
@@ -72,8 +72,8 @@ const ProjectsSection = () => {
                             <span>Google Cloud</span>
                         </div>
                         <div className = 'project-links' style = {linksStyle}>
-                       <a href = '#'> <i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
-                       <a href = '#'> <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
+                       <a > <i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
+                       <a > <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
 
                         </div>
                     </div>
@@ -144,5 +144,12 @@ const iconStyle = {
     marginLeft:'20px',
 }
 
+const headingLineStyle = {
+    height:'3px',
+    width:'20%',
+    marginLeft:'20px',
+    color:'#802bb1',
+    opacity:'0.7'
+}
 
 export default ProjectsSection
