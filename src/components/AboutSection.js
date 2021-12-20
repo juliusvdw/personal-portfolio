@@ -11,7 +11,7 @@ const AboutSection = ({ children }) => {
             <div className  = 'about-container' style = {containerStyle}>
                 <div className = 'about-text' style = {textContainerStyle}>
                     <h3 style = {aboutHeadingStyle} className = 'd-flex'>About me <hr style = {headingLineStyle} /></h3>
-                    <p style = {aboutSubtextStyle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt maiores voluptas aliquid reiciendis labore, quis ipsam ad commodi voluptatibus perspiciatis sint molestias totam neque porro magnam ratione numquam rerum. <br /> <br /> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur qui perferendis cum culpa mollitia excepturi.</p>
+                    <p style = {aboutSubtextStyle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sunt maiores voluptas aliquid reiciendis labore, quis ipsam ad commodi voluptatibus perspiciatis sint molestias totam neque porro magnam ratione numquam rerum. <br /> <br /> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur qui perferendis cum culpa mollitia excepturi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur qui perferendis cum culpa mollitia excepturi. </p>
                     <h6 className = 'mt-4'>My tech stack</h6>
                     <div className = 'technologies-container d-flex ' style = {techContainerStyle}>
                         <div style = {{flex:'1'}}>
