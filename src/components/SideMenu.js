@@ -105,7 +105,7 @@ const SideMenu = ({ children }) => {
             <div className = 'menu-socials' style = {socialsStyle}>
             <i className=" mt-3 bi bi-github"></i>
             <i className=" mt-3 bi bi-linkedin"></i>
-            <div className = 'light-switch mt-3' onClick = {() => handleLightSwitch()}><span className = 'light-slider'></span></div>
+           <a > <div className = 'light-switch mt-3' onClick = {() => handleLightSwitch()}><span className = 'light-slider'></span></div> </a>
             </div>
         </div>
 
