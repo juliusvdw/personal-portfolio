@@ -92,6 +92,7 @@ const SideMenu = ({ children }) => {
 
         <div className = 'side-menu-right-wrapper' style = {rightWrapperStyle}>
             <a href = '/' style = {logoStyle}>J</a>
+            <a href = '#'>
             <div id = 'hamburger-icon' onClick = {()=> handleMenuClick()}>
                 <span className = 'hamburger-line'></span>
                 <span className = 'hamburger-line'></span>
@@ -99,6 +100,7 @@ const SideMenu = ({ children }) => {
                 <span className = 'hamburger-line'></span>
                 
             </div>
+            </a>
 
             <div className = 'menu-socials' style = {socialsStyle}>
             <i className=" mt-3 bi bi-github"></i>

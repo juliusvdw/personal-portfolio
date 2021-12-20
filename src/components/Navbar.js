@@ -6,9 +6,9 @@ const Navbar = ({ children }) => {
     return (
         <div id = 'navbar'   style = {navStyle}>
             <div className = 'navbar-links  text-white d-flex' style = {linksContainerStyle}>
-                <a href = ''><span style = {linkStyle} className = 'navbar-link'>About</span> </a>
-                <a href = ''><span style = {linkStyle} className = 'navbar-link'>Contact</span> </a>
-                <a href = ''><span style = {linkStyle} className = 'navbar-link'>Projects</span> </a>
+                <a href = '#'><span style = {linkStyle} className = 'navbar-link'>About</span> </a>
+                <a href = '#'><span style = {linkStyle} className = 'navbar-link'>Contact</span> </a>
+                <a href = '#'><span style = {linkStyle} className = 'navbar-link'>Projects</span> </a>
                 
                 
             </div>

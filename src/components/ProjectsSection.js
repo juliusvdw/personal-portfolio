@@ -20,8 +20,8 @@ const ProjectsSection = () => {
                             <span>Google Cloud</span>
                         </div>
                         <div className = 'project-links' style = {linksStyle}>
-                        <i className=" mt-3 bi bi-github" style = {iconStyle}></i>
-                        <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i>
+                        <a href = '#'><i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
+                        <a href = '#'><i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
 
                         </div>
                     </div>
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
                 </div>
                 {/*Row 2 */}
                
-               <div className = 'row' style = {{marginTop:'100px'}}>
+               <div className = 'row' style = {{marginTop:'70px'}}>
 
                
                 <div className = 'col-lg-6 mt-4' style = {projectTextContainerStyle}>
@@ -44,18 +44,18 @@ const ProjectsSection = () => {
                             <span>Google Cloud</span>
                         </div>
                         <div className = 'project-links' style = {linksStyle}>
-                        <i className=" mt-3 bi bi-github" style = {iconStyle}></i>
-                        <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i>
+                        <a href = '#'><i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
+                        <a href = '#'><i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
 
                         </div>
                     </div>
                 </div>
-                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
+                <div className = 'col-lg-6 mt-4 ' style = {projectContainerStyle}>
                     <img src = 'audiophile-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
                 </div>
                 </div>
 
-               <div className = 'row' style = {{marginTop:'100px'}}>
+               <div className = 'row' style = {{marginTop:'70px'}}>
 
                <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
                     <img src = 'devslist-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
@@ -72,8 +72,8 @@ const ProjectsSection = () => {
                             <span>Google Cloud</span>
                         </div>
                         <div className = 'project-links' style = {linksStyle}>
-                        <i className=" mt-3 bi bi-github" style = {iconStyle}></i>
-                        <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i>
+                       <a href = '#'> <i className=" mt-3 bi bi-github" style = {iconStyle}></i></a>
+                       <a href = '#'> <i className="mt-3 bi bi-box-arrow-up-right" style = {iconStyle}></i></a>
 
                         </div>
                     </div>
@@ -128,7 +128,8 @@ const techStyle = {
     minWidth:'50%',
     color:'rgb(155,155,155)',
     fontSize:'14px',
-    marginTop:'20px'
+    marginTop:'20px',
+    marginBottom:'15px'
 }
 
 const linksStyle = {
@@ -140,7 +141,8 @@ const linksStyle = {
 
 const iconStyle = {
     fontSize:'24px',
-    marginLeft:'20px'    
+    marginLeft:'20px',
 }
+
 
 export default ProjectsSection
