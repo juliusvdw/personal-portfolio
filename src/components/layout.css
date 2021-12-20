@@ -31,7 +31,6 @@ body {
   width: 25px;
   height: 25px;
   position: relative;
-  margin: 50px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -125,6 +124,10 @@ body {
   color:#fff;
   border-width:2px;
   font-weight: 600;
+}
+
+.hero-btn:hover {
+  border-color: #fff;
 }
 
 .hero-underline {
