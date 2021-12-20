@@ -78,7 +78,8 @@ const mouseCircleStyle = {
         borderRadius: '50%',
         pointerEvents: 'none',
         backgroundColor:'#802bb1',
-        transition:'transform 0.2s'
+        transition:'transform 0.3s',
+        zIndex:'1000',
     
 }
 
