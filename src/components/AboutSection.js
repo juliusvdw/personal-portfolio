@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 const AboutSection = ({ children }) => {
 
     return (
-        <div className = 'about-section-wrapper' style = {wrapperStyle}>
+        <div className = 'about-section-wrapper' id = 'about' style = {wrapperStyle}>
 
             <div className  = 'about-container' style = {containerStyle}>
                 <div className = 'about-text' style = {textContainerStyle}>

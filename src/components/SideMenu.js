@@ -8,7 +8,7 @@ const SideMenu = ({ children }) => {
     const [lightMode, setLightMode] = useState(false)
 
     //Handle menu hamburger click
-    const handleMenuClick = () => {
+    const handleMenuClick = (destinationId) => {
 
         const menu = document.querySelector('.side-menu-wrapper');
         const hamburger = document.querySelector('#hamburger-icon')
@@ -29,6 +29,27 @@ const SideMenu = ({ children }) => {
             },500)
         }
 
+    }
+
+    //Handle link click 
+    const handleLinkClick = (destinationId) => {
+
+        const menu = document.querySelector('.side-menu-wrapper');
+        const hamburger = document.querySelector('#hamburger-icon')
+        //Close menu
+        menu.style.transform = 'translateX(calc(-100vw + 100px))'
+        setMenuopen(false)
+            setTimeout(() => {
+                hamburger.classList.remove('open')
+
+            },500)
+            //Scroll to destination
+        setTimeout(() => {
+            let destination = document.querySelector(destinationId)
+            destination.scrollIntoView({
+                behaviour:'smooth'
+            })
+        },300)
     }
 
     //Handle Light switch click 
@@ -74,15 +95,15 @@ const SideMenu = ({ children }) => {
 
             <div className = 'side-menu-large-section' style = {largeSectionStyle}>
 
-                <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleMenuClick()}>
+                <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleLinkClick('#about')}>
                         About
                     </div>
         
-                    <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleMenuClick()}>
+                    <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleLinkClick('#projects')}>
                         Projects
                     </div>
         
-                    <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleMenuClick()}>
+                    <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleLinkClick('#contact')}>
                         Contact
                     </div>
 
@@ -92,7 +113,7 @@ const SideMenu = ({ children }) => {
 
         <div className = 'side-menu-right-wrapper' style = {rightWrapperStyle}>
             <a href = '/' style = {logoStyle}>J</a>
-            <a href = '#'>
+            <a>
             <div id = 'hamburger-icon' onClick = {()=> handleMenuClick()}>
                 <span className = 'hamburger-line'></span>
                 <span className = 'hamburger-line'></span>

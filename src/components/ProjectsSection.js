@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProjectsSection = () => {
     return (
-        <div className = 'projects-section-wrapper' style = {wrapperStyle}>
+        <div className = 'projects-section-wrapper' id = 'projects' style = {wrapperStyle}>
             <h3 className = 'd-flex'>Some of my recent projects <hr style = {headingLineStyle} /></h3>
             <div className = 'row projects-row' style = {projectsContainerStyle}>
                 <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
@@ -88,7 +88,9 @@ const ProjectsSection = () => {
 }
 
 const wrapperStyle = {
-    minHeight:'100vh'
+    minHeight:'100vh',
+    paddingTop:'100px',
+    paddingBottom:'100px'
 }
 
 const projectsContainerStyle = {
