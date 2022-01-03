@@ -33,20 +33,15 @@ const MouseCircle = () => {
         links.forEach(link => {
         link.addEventListener('pointerenter', (e) => {
             mouseCircle.style.transform = 'scale(0.3)'
+            mouseCircle.style.background = 'lightgreen'
         })
         link.addEventListener('pointerleave', (e) => {
             mouseCircle.style.transform = 'scale(1)'
+            mouseCircle.style.background = '#802bb1'
+
         })
     })
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(button => {
-        button.addEventListener('pointerenter', (e) => {
-            mouseCircle.style.transform = 'scale(0.3)'
-        })
-        button.addEventListener('pointerleave', (e) => {
-            mouseCircle.style.transform = 'scale(1)'
-        })
-    })
+    //     
 
     },[])
 
@@ -74,7 +69,6 @@ const mouseCircleStyle = {
         width: '35px',
         height: '35px',
         margin: '-20px 0 0 -20px',
-        border: '1px solid #0f1c64',
         borderRadius: '50%',
         pointerEvents: 'none',
         backgroundColor:'#802bb1',
