@@ -1,12 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
+import ProjectDetails from './ProjectDetails'
 
 const ProjectsSection = () => {
+
+    const [showProject, setShowProject] = useState(false)
+
+    //Display project details on project click
+    const displayProject = () =>  {
+        const details = document.querySelector('.project-details-wrapper')
+
+        setShowProject(!showProject)
+
+        if(showProject){
+            details.style.transform = 'translateX(500px)'
+ 
+        } else {
+            details.style.transform = 'translateX(0)'
+
+        }
+    }
+
     return (
+        <>
         <div className = 'projects-section-wrapper' id = 'projects' style = {wrapperStyle}>
             <h3 className = 'd-flex'>Some of my recent projects <hr style = {headingLineStyle} /></h3>
             <div className = 'row projects-row' style = {projectsContainerStyle}>
                 <div className = 'col-lg-6 mt-4' style = {projectContainerStyle}>
-                    <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle}></img>
+                    <img src = 'cryptohawk-project.png' className = 'w-100 h-100' style = {imageStyle} onClick = {() => displayProject()}></img>
                 </div>
                 <div className = 'col-lg-6 mt-4' style = {projectTextContainerStyle}>
                     <div className = 'project-text-container' style = {projectTextStyle}>
@@ -107,6 +127,9 @@ const ProjectsSection = () => {
                
                 
         </div>
+
+        <ProjectDetails />
+</>
     )
 }
 
