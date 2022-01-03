@@ -81,6 +81,29 @@ const ProjectsSection = () => {
                 
                 </div>
 
+                <div className = 'more-projects-section' style = {moreProjectsStyle}>
+                    <h3 className = 'text-center text-white' style = {moreHeadingStyle}>More Projects</h3>
+
+                    <div className = 'row'>
+                        <div className = 'col-lg-4 project-card-small' >
+                            <div className = 'project-card-small' style = {smallProjectCard}>
+
+                            </div>
+                        </div>
+                        <div className = 'col-lg-4 project-card-small' >
+                            <div className = 'project-card-small' style = {smallProjectCard}>
+
+                            </div>
+                        </div>
+                        <div className = 'col-lg-4 project-card-small' >
+                            <div className = 'project-card-small' style = {smallProjectCard}>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
                
                 
         </div>
@@ -152,6 +175,21 @@ const headingLineStyle = {
     marginLeft:'20px',
     color:'#802bb1',
     opacity:'0.7'
+}
+
+const moreProjectsStyle = {
+    marginTop:'100px'
+}
+
+const moreHeadingStyle = {
+    marginBottom:'50px'
+}
+
+const smallProjectCard = {
+    height:'300px',
+    width:'323px',
+    backgroundColor:'#2a2a2a',
+    borderRadius:'5px'
 }
 
 export default ProjectsSection
