@@ -16,7 +16,7 @@ const HeroSection = ({ children }) => {
                 <p style = {introSmallStyle}>Hi, I'm Julius.</p>
                 <h1 style = {heroNameStyle}>I build things <span className = 'hero-underline'  >for the web.</span> </h1>
                 <p style = {subTextStyle}>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
-                <div className = 'btn btn-primary hero-btn'>View My Projects</div>
+                <a href = '#projects'><div className = 'btn btn-primary hero-btn'>View My Projects</div></a>
             </div>
         </div>
 
