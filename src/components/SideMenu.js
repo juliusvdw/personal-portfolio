@@ -96,15 +96,15 @@ const SideMenu = ({ children }) => {
             <div className = 'side-menu-large-section' style = {largeSectionStyle}>
 
                 <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleLinkClick('#about')}>
-                        About
-                    </div>
+                       <a> About</a>
+                    </div> 
         
                     <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleLinkClick('#projects')}>
-                        Projects
+                        <a>Projects</a>
                     </div>
         
                     <div className = 'side-menu-section' style = {sideMenuSectionStyle} onClick = {() => handleLinkClick('#contact')}>
-                        Contact
+                        <a>Contact </a>
                     </div>
 
             </div>
@@ -124,8 +124,8 @@ const SideMenu = ({ children }) => {
             </a>
 
             <div className = 'menu-socials' style = {socialsStyle}>
-            <i className=" mt-3 bi bi-github"></i>
-            <i className=" mt-3 bi bi-linkedin"></i>
+            <a href = 'https://github.com/juliusvdw' target = '_blank'><i className=" mt-3 bi bi-github"></i></a>
+            <a href = 'https://www.linkedin.com/in/julius-van-der-westhuizen-aa5514136/' target = '_blank'><i className=" mt-3 bi bi-linkedin"></i></a>
            <a > <div className = 'light-switch mt-3' onClick = {() => handleLightSwitch()}><span className = 'light-slider'></span></div> </a>
             </div>
         </div>
